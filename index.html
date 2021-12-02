@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h4>Задание 1</h4>
+        <p>Составить алгоритм: если введенное число больше 7, то вывести “Привет”</p>
+        <script>
+            function checkNum() {
+                let numToCheck = document.getElementById('num').value;
+                if(numToCheck > 7){
+                document.getElementById('res1').value = "Привет";
+                } else {
+                document.getElementById('res1').value = " ";
+                }
+            }
+        </script>
+        <span>Введите число:<input type="number" id='num' ></span>
+        <span><input type="button" value="Проверить" onclick="checkNum()"></span>
+        <span><input type="text" id='res1'></span>
+    </div>
+    <hr>
+    <div>
+        <h4>Задание 2</h4>
+        <p>Составить алгоритм: если введенное имя совпадает с Вячеслав, то вывести “Привет, Вячеслав”, если нет, то вывести "Нет такого имени"</p>
+        <script>
+            function checkName() {
+                let nameToCheck = document.getElementById('name').value;
+                if(nameToCheck == "Вячеслав"){
+                document.getElementById('res2').value = "Привет, Вячеслав";
+                } else {
+                document.getElementById('res2').value = "Нет такого имени";
+                }
+            }
+        </script>
+        <span>Введите имя:<input type="text" id='name' ></span>
+        <span><input type="button" value="Проверить" onclick="checkName()"></span>
+        <span><input type="text" id='res2' ></span>
+    </div>
+    <hr>
+    <div>
+        <h4>Задание 3</h4>
+        <p>Составить алгоритм: на входе есть числовой массив, необходимо вывести элементы массива кратные 3</p>
+        <script>
+            function checkArr() {
+                let arrToCheck = document.getElementById('arr').value.split(",");
+                let arrRes= arrToCheck.filter(function(number) {
+                 return number % 3 == 0;
+             });
+             document.getElementById('res3').value = arrRes;
+            }
+        </script>
+        <span>Введите числа, через ",":<input type="text" id='arr' ></span>
+        <span><input type="button" value="Проверить" onclick="checkArr()"></span>
+        <span><input type="text" id='res3' ></span>
+    </div>
+    <hr>
+    <h4>Задание 4</h4>
+    <p>Дана скобочная последовательность: [((())()(())]]</p>
+    <p>Данную последовательность считать правильной нельзя, 
+        чтобы исправить, нужно заменить второй символ на "[" - [[(())()(())]]</p>
+    
+
+
+
+</body>
+
+</html>
